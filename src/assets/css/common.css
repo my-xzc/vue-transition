@@ -1,0 +1,138 @@
+body,html{
+  height:100%;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  height: 100%;
+}
+.child-view {
+  position:absolute;
+  width: 100%;
+  transition: transfrom .5s cubic-bezier(.55,0,.1,1);
+}
+/**
+*  bounceInLeft / bounceOutRight
+*  fadeIn/fadeOut
+*
+**/
+/*过场动画*/
+@-webkit-keyframes bounceInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceInLeft {
+
+  from{
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.bounceInLeft {
+  -webkit-animation: bounceInLeft .5s;
+  animation: bounceInLeft .5s;
+}
+
+@-webkit-keyframes bounceOutRight {
+
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceOutRight {
+
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+
+  to {
+     opacity: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.bounceOutRight {
+  -webkit-animation: bounceOutRight .5s;
+  animation: bounceOutRight .5s;
+}
+/*fadeIn*/
+@-webkit-keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+     opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn .5s;
+  animation: fadeIn .5s;
+}
+/*fadeOut*/
+@-webkit-keyframes fadeOut {
+
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+
+  from {
+    opacity: 1;
+  }
+
+  to {
+     opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut .5s;
+  animation: fadeOut .5s;
+}
