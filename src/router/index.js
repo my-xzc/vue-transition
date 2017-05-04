@@ -6,6 +6,7 @@ import Hello from '@/components/public/hello'
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',

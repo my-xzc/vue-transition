@@ -4,8 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import lodash from 'lodash'
-import Data from './server/data.js'
-import api from './server/apiConfig.js'
+import Data from './server/data'
+import api from './server/apiConfig'
+import authorize from './platform/authorize'
+
+authorize()
+
 Vue.config.productionTip = false
 Vue.prototype.$ajax = Data;
 Vue.prototype.$api = api;
