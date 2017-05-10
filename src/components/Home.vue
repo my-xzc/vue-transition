@@ -13,6 +13,19 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods:{
+    getDate:function(){
+      this.$http.jsonp('http://api.douban.com/v2/movie/top250')
+          .then(function(res){
+              console.log(res);
+          },function(res){
+              console.log(res);
+          })
+    }
+  },
+  created () {
+      this.getDate();  
   }
 }
 </script>

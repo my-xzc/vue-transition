@@ -35,7 +35,6 @@ export default new Router({
               { path: 'bar', component: Bar }
       ]
     }
-    
   ],
   scrollBehavior (to, from, savedPosition) { //滚动行为
         if (savedPosition) {
