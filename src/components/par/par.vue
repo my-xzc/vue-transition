@@ -1,8 +1,14 @@
 <template>
   <div class="hello">
-      <img src="../assets/logo.png"><br>
-    <router-link to="/hello">hello</router-link>
-    <router-link to="/par">par</router-link>
+      <img src="../../assets/logo.png"><br>
+      <ul>  
+      <li><router-link to="/par" replace>par</router-link></li>
+        <li><router-link to="/par/foo" replace>/par/foo</router-link></li>
+        <li><router-link to="/par/bar" replace>/par/bar</router-link></li>
+      </ul>
+      <transition name='fade' mode='out-in'>
+      <router-view ></router-view>
+      </transition>
   </div>
 </template>
 

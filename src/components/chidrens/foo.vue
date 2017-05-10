@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
-      <img src="../assets/logo.png"><br>
-    <router-link to="/hello">hello</router-link>
-    <router-link to="/par">par</router-link>
+
+      <h2>foo</h2>
   </div>
 </template>
 
@@ -13,6 +12,14 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted () {
+   this.con() 
+  },
+  methods:{
+        con:function(){
+          console.log('foo');
+        }
   }
 }
 </script>

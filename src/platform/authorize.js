@@ -1,5 +1,5 @@
 var platforms = ['WX', 'PC', 'WAP', 'APP']
-var platform = platforms[0]
+var platform = platforms[1]
 var checkWX = function() {
 		var ua = navigator.userAgent.toLowerCase();
 		var isWeixin = ua.indexOf('micromessenger') != -1;
